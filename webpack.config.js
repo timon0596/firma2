@@ -68,40 +68,48 @@ module.exports={
          use: [
          	'file-loader',
          ]         
-       },{
-		  test: /\d{1,3}\.image\d{1}\.(jpg|png)$/,
-		  exclude: [path.resolve(__dirname, "src/img/roomdetails")],
-		  use:[ {
-		    loader: "file-loader",
-		    options: {
-		      name: "[name].[ext]",
-		      outputPath: './img/roompreviewPics/',
-		      useRelativePath: true
-		  }}],
-  },{
-		  test: /[123]\.(jpg|png)/,
-		  exclude: [path.resolve(__dirname, "src/img/roompreview")],
-		  use:[ {
-		    loader: "file-loader",
-		    options: {
-		      name: "[name].[ext]",
-		      outputPath: './img/roomDetailsPics/',
-		      useRelativePath: true
-		  }}],
-  },{
-		  test: /usericon\.(jpg|png|svg)$/,
-		  exclude: [path.resolve(__dirname, "src/img/roompreview"),path.resolve(__dirname, "src/img/roomdetails")],
-		  use:[ {
-		    loader: "file-loader",
-		    options: {
-		      name: "[name].[ext]",
-		      outputPath: './img/reviewusericons/',
-		      useRelativePath: true
-		  }}],
-  },
+       },
+  //      {
+		//   test: /\d{1,3}\.image\d{1}\.(jpg|png)$/,
+		//   exclude: [path.resolve(__dirname, "src/img/roomdetails")],
+		//   use:[ {
+		//     loader: "file-loader",
+		//     options: {
+		//       name: "[name].[ext]",
+		//       outputPath: './img/roompreviewPics/',
+		//       useRelativePath: true
+		//   }}],
+  // },
+  // {
+		//   test: /[123]\.(jpg|png)/,
+		//   exclude: [path.resolve(__dirname, "src/img/roompreview")],
+		//   use:[ {
+		//     loader: "file-loader",
+		//     options: {
+		//       name: "[name].[ext]",
+		//       outputPath: './img/roomDetailsPics/',
+		//       useRelativePath: true
+		//   }}],
+  // },
+  // {
+		//   test: /usericon\.(jpg|png|svg)$/,
+		//   exclude: [path.resolve(__dirname, "src/img/roompreview"),path.resolve(__dirname, "src/img/roomdetails")],
+		//   use:[ {
+		//     loader: "file-loader",
+		//     options: {
+		//       name: "[name].[ext]",
+		//       outputPath: './img/reviewusericons/',
+		//       useRelativePath: true
+		//   }}],
+  // },
        {
 		  test: /\.(jpg|png|svg)$/,
-		  exclude: [path.resolve(__dirname, "src/img/roompreview"),path.resolve(__dirname, "src/fonts"),path.resolve(__dirname, "src/img/roomdetails"),path.resolve(__dirname, "src/img/reviewIcons")],
+		  // exclude: [
+		  // 	path.resolve(__dirname, "src/img/roompreview"),
+		  // 	path.resolve(__dirname, "src/fonts"),
+		  // 	path.resolve(__dirname, "src/img/roomdetails"),
+		  // 	path.resolve(__dirname, "src/img/reviewIcons")
+		  // 	],
 		  use:[ {
 		    loader: "file-loader",
 		    options: {
@@ -116,23 +124,6 @@ module.exports={
 		new HWP({
 			template: './src/index.pug',
 			filename: 'index.html'
-		}),
-		new HWP({
-			template: './src/cards/cards.pug',
-			filename: 'cards.html'
-		}),
-		new HWP({
-			template: './src/headers_and_footers/headers_and_footers.pug',
-			filename: 'hf.html'
-		}),new HWP({
-			template: './src/landingPage.pug',
-			filename: 'landingPage.html'
-		}),new HWP({
-			template: './src/website_pages/search_room/search_room.pug',
-			filename: 'search_room.html'
-		}),new HWP({
-			template: './src/website_pages/room_details/room_details.pug',
-			filename: 'room_details.html'
 		}),
 		new webpack.ProvidePlugin({
 			$: 'jquery',
