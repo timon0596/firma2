@@ -6,8 +6,8 @@ head
 	title firma2
 body
 	+header()
-	main
-		.main_wrapper
+	.main_wrapper
+		main
 			+formsection()
 			+paymentsection()
 			+gbdd()
@@ -15,4 +15,5 @@ body
 			+tax()
 			+services()
 			+partners()
-	
+		include components/_footer
+	include components/_modal

@@ -37,11 +37,11 @@ body
 	font-family: 'ptsans caption'
 	font-size: 15px
 	line-height: 21px
+
 a
 	color: #0777ba
 section
   padding: 0px 160px 
-  box-shadow: 0px 1px 0px 
   background: white
 section.content
   display: -webkit-flex
@@ -81,6 +81,7 @@ section.content:nth-child(even)
   display: -o-flex
   display: flex
   margin: 0px -3px
+  width: 100%
   .col-3
     display: -webkit-flex
     display: -moz-flex
@@ -92,8 +93,6 @@ section.content:nth-child(even)
     padding-right: calc((100%/12 - 6px)*0.27)
     margin: 0px 3px
     box-sizing: border-box
-    height: 100px
-    background: blue
   .col-offset-3 
     margin-left: calc((100%/12 - 6px)*3 + 18px)
 h1 
@@ -108,15 +107,19 @@ h3
 h4
   font-size: 12px
   line-height: 14px
-main
+body
   position: relative
+  box-sizing: content-box
   .main_wrapper
     position: absolute
     top: 67px
-    width: 100%
+.button
+  cursor: pointer
 @import "../fonts/fonts"
 @import "_header"
 @import "_form_section"
 @import "_payment_section"
-@import "sec.content.img"
+@import "section.content.img"
 @import "_partners"
+@import "_footer"
+@import "_modal"
