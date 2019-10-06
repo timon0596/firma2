@@ -37,3 +37,16 @@ $("header span.button").click(function(){
 		flag--
 	}	
 })
+//------share------
+//------share------
+//------share------
+console.log($(".payment .share").offset())
+window.onscroll = function(){
+	console.log(window.pageYOffset)
+	if(window.pageYOffset>=400){
+		$(".payment .share").addClass("shareFixed")
+	}
+	if(window.pageYOffset<400){
+		$(".payment .share").removeClass("shareFixed")
+	}
+}
